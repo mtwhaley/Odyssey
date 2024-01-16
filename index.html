@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ana Regalado LMSW offers mental health therapy services. 
+        Main office located in Derby, near Wichita, Kansas. 
+        Bilingual -- English and Spanish speaking. 
+        Click below for a list of services, approaches, accepted insurances, and accepted payment methods. 
+        Schedule an appointment today!">
+    <meta name="author" content="Mitchell Whaley">
+    <meta name="robots" content="follow, index">
+    <meta name="keywords" content="ana regalado, therapist, LMSW, Derby, Kansas, KS, mental health, health, counseling">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Regalado LMSW</title>
+    <link rel="stylesheet" href="Style/main.css">
+    <link rel="stylesheet" href="Style/TurtleEmblem.css">
+    <link rel="stylesheet" href="Style/navigation.css">
+    <link rel="stylesheet" href="Style/Info.css">
+    <link rel="stylesheet" href="Style/Telehealth.css">
+    <link rel="stylesheet" href="Style/Location.css">
+    <link rel="stylesheet" href="Style/Form.css">
+
+</head>
+<body onbeforeunload="resetForm()">
+    <div id="header">
+        <p>
+            <span id="Name" style="font-size: 5vh;"><u>Ana Regalado LMSW</u></span><br>
+            Derby, KS&nbsp;&nbsp;
+            &#x2022;&nbsp;&nbsp;
+            316.844.6824
+        </p>
+    </div>
+    <div id="qualifications">
+        <ul>
+            <li>Master of Social Work - WSU</li>
+            <li>Mental Health Therapist - Counseling Avenues</li>
+            <li>Trauma Proficient</li>
+            <li>Maternal Mental Health Certified</li>
+            <li>Bilingual -- English and Spanish</li>
+
+        </ul>
+
+    </div>
+
+    <div class="navigation">
+        <table class="navTable">
+            <tr>
+                <td><a href="#about"><button style="border-radius: 4vh 0 0 4vh;">About</button></a></td>
+                <td><a href="#info"><button>Services</button></a></td>
+                <td><a href="#Location"><button style="border-radius: 0 4vh 4vh 0;">Location</button></a></td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="appointment">
+        <button class="appointmentButton" onclick="openForm()">Request Appointment</button>
+    </div>
+
+    <div class="canvas" id="about">
+        <div id="bio">
+            <p>
+                <span style="font-size: 4vh;">Welcome in!</span><br><br>
+                
+                It's no secret that life gets tough. Sometimes it can be overwhelming.
+                From time to time, we could all use some help to get us through it and as a therapist, I do just that!<br><br>
+
+                My approach is warm, honest, and client-centered. So when you come to see me, I will be non-judgmental, you will set your own goals, and we will work at your pace.
+                My goal is to help you acheive yours by navigating life's challenges and overcoming its obstacles.<br><br><br>
+
+                <b>Why me?</b><br>
+                I have practiced family therapy, couples therapy, and individual therapy.<br><br>
+                I have extensive experience in family preservation and with families who have endured a lot of trauma; this has allowed me to work with clients of all ages.<br><br>
+                My background is culturally diverse, which allows me to understand and be open-minded to any culturally-specific challenges or pressures that you may be under.<br><br>
+                I am also bilingual, fluent in English and Spanish!<br><br>
+                I know that I have never treated someone that has gone through exactly what you are going through, but that is because you are unique!
+                There is no "one-size-fits-all" or blanket treatment for what you are going through. You have your own path to walk.
+                I just want to help you stay on course!<br><br><br>
+
+                <b>Why you?</b><br>
+                I can't wait to find out!
+            </p>
+             
+        </div>
+    </div>
+    <div class="returnToTop">
+        <a href="#header">return to top</a>
+    </div>
+
+    <div id="telehealth">
+        <div id="Banner">
+            <div id="BannerText"><p><i><b>Telehealth appointments also available!</b></i></p></div>
+            <div id="telehealthEmblem">
+                <div id="innerCircle">
+                    <div id="box"></div>
+                    <div id="lens"></div>
+                    <div id="lensneg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="info">
+        <div class="verticalFlex">
+            <div id="infoButtonTable">
+                <button id="servicesButton" class="infoTab">Services</button>
+                <button id="approachesButton" class="unselectedButton">Approaches</button>
+                <button id="insuranceButton" class="unselectedButton">Insurance</button>
+                <button id="paymentButton" class="unselectedButton">Payment</button>
+
+            </div>
+        </div>
+        <div class="infoArea">
+
+            <div id="serviceInfo" class="infoDisplay">
+                <p class="listHeader">Services provided for:<hr></p>
+                <table class="listTable" style="width: 90%;" id="serviceTable"></table>
+                <p>and more!</p>
+            </div>
+
+            <div id="approachInfo" class="infoDisplay">
+                <p class="listHeader">Approaches:<hr></p>
+                <table class="listTable" style="width: 90%;" id="approachTable"></table>
+                <p> </p>
+            </div>
+
+            <div id="insuranceInfo" class="infoDisplay">
+                <p class="listHeader">Accepted Insurances:<hr></p>
+                <table class="listTable">
+                    <tr>
+                        <td class="leftCell">Blue Cross / Blue shield</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td class="leftCell">Sunflower</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td class="leftCell">Medicaid</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td class="leftCell">proviDrs</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td class="leftCell">Aetna</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>              
+                </table>
+                <p> </p>
+            </div>
+
+            <div id="paymentInfo" class="infoDisplay">
+                <p class="listHeader">Accepted methods of payment:<hr></p>
+                <ul class="list">
+                    <li>Visa</li>
+                    <li>Mastercard</li>
+                    <li>cash</li>
+                    <li>check</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="appointment">
+        <button class="appointmentButton" onclick="openForm()">Request Appointment</button>
+    </div>
+
+    <div id="Location">
+        <p>Primary Location:</p>
+        <p>
+            <span style="font-size: larger;">Counseling Avenues</span><br>
+            1721 E Osage Rd #100<br>
+            Derby, KS 67037<br>
+
+        </p>
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d790.864030613131!2d-97.24541753879956!3d37.54431613806754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87baeffe7ca45d27%3A0x7c777f4d2084120!2sCounseling%20Avenues%20LLC!5e0!3m2!1sen!2sus!4v1703995559579!5m2!1sen!2sus"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <div class="returnToTop" style="margin-top: 3vh;">
+        <a href="#header">return to top</a>
+    </div>
+ 
+
+
+
+    <div id="formBackground">
+        <div id="formArea">
+            <p style="margin-bottom: 2vh; margin-top: 3vh; font-size: larger;">Request an appointment</p>
+            <form id="apptReqForm" onsubmit="return validate()">
+                <table id="formTable">
+                    <tr>
+                        <td><label for="fname">First Name: </label></td>
+                        <td><input type="text" name="fname" id="fname" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lname">Last Name: </label></td>
+                        <td><input type="text" name="lname" id="lname" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone" id="phoneLabel">Phone Number: </label></td>
+                        <td><input type="tel" name="phone" id="phone" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">email: </label></td>
+                        <td><input type="email" name="email" id="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="insBox">Insurance: </label></td>
+                        <td>
+                            <select name="insBox" id="insBox" onchange="additionalField()" required>
+                                <option value="BC/BS">Blue Cross / Blue Shield</option>
+                                <option value="Sunflower">Sunflower</option>
+                                <option value="Medicaid">Medicaid</option>
+                                <option value="proviDrs">proviDrs</option>
+                                <option value="Aetna">Aetna</option>
+                                <option value="Other">Other</option>
+                                <option value="None">None</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;font-size: 2.8vh;padding-top: 2vh;">
+                            <div id="manualInsuranceEntry" hidden>
+                                <label for="otherIns" id="otherInsLabel">Please enter other insurance: </label><br>
+                                <input type="text" name="otherIns" id="otherIns">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="text-align: center;font-size: 2.8vh;">
+                            <label for="message">Is there anything that you would like me to know?</label><br>
+                            <textarea name="message" id="message" style="width: 95%;" rows="5"></textarea>
+                        </td>
+                    </tr>
+
+                </table> 
+                <input type="text" id="ins" hidden>
+                <input type="submit" id="submitForm" value="Submit">
+            </form>
+            
+            
+        </div>
+        <button id="closeButton" onclick="closeForm()">&times;</button>
+    </div>
+    <div class="Photo">
+        <img src="Images/Ana-photo.JPG" id="headshot" alt="Ana Regalado, bilingual therapist in Derby, Kansas, profile picture">
+    </div>
+
+    <div class="TurtleFam">
+        <div id="Turtle1">
+            <div id="turtleShell"></div>
+            <div id="turtleLeftLeg">
+                <div id="turtleLegFin"></div>
+                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
+                <div id="turtleFoot"></div>
+            </div>
+            <div id="turtleRightLeg">
+                <div id="turtleLegFin"></div>
+                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
+                <div id="turtleFoot"></div>
+            </div>
+            <div id="turtleLeftArm">
+                <div id="turtleLegFin"></div>
+                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
+                <div id="turtleFoot"></div>
+            </div>
+            <div id="turtleRightArm">
+                <div id="turtleLegFin"></div>
+                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
+                <div id="turtleFoot"></div>
+            </div>
+            <div id="turtleHead"></div>
+        </div>
+        <div id="Turtle2">
+            <div id="turtleShell"></div>
+            <div id="turtleLeftLeg">
+                <div id="turtleLegFin"></div>
+                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
+                <div id="turtleFoot"></div>
+            </div>
+            <div id="turtleRightLeg">
+                <div id="turtleLegFin"></div>
+                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
+                <div id="turtleFoot"></div>
+            </div>
+            <div id="turtleLeftArm">
+                <div id="turtleLegFin"></div>
+                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
+                <div id="turtleFoot"></div>
+            </div>
+            <div id="turtleRightArm">
+                <div id="turtleLegFin"></div>
+                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
+                <div id="turtleFoot"></div>
+            </div>
+            <div id="turtleHead"></div>
+        </div>
+        <div id="Turtle3">
+            <div id="turtleShell"></div>
+            <div id="turtleLeftLeg">
+                <div id="turtleLegFin"></div>
+                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
+                <div id="turtleFoot"></div>
+            </div>
+            <div id="turtleRightLeg">
+                <div id="turtleLegFin"></div>
+                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
+                <div id="turtleFoot"></div>
+            </div>
+            <div id="turtleLeftArm">
+                <div id="turtleLegFin"></div>
+                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
+                <div id="turtleFoot"></div>
+            </div>
+            <div id="turtleRightArm">
+                <div id="turtleLegFin"></div>
+                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
+                <div id="turtleFoot"></div>
+            </div>
+            <div id="turtleHead"></div>
+        </div>
+    </div>
+
+
+
+<!--
+    <div id="footer">
+        <p style="width: 100%; margin-bottom: 2vh;">Get more info!<hr></p>
+        <div id="footerFlex">
+            <span style="min-width: 30%;">
+                <a href="https://www.psychologytoday.com/us/therapists/ana-gabriela-regalado-derby-ks/1011608" style="font-weight: bold;">
+                    Psychology Today Profile
+                </a>
+            </span>
+            <span style="min-width: 30%;">&#x2022;</span>
+            <span style="min-width: 30%;">
+                <a href="https://www.counselingavenues.com/" style="font-weight: bold;">
+                    Counseling Avenues
+                </a>
+            </span>
+        </div>
+    </div>
+-->
+
+    <div id="footer" style="text-align: right; padding-right: 2vw;">
+        <div style="text-align: center;">
+            <ul style="list-style: none; margin-bottom: 0; margin-top: 0;">
+                <li style="padding-bottom: 1vh;">
+                    <a href="https://www.psychologytoday.com/us/therapists/ana-gabriela-regalado-derby-ks/1011608" class="externalLink">
+                        Psychology Today
+                    </a>
+                </li>
+                <li style="padding-bottom: 1vh;">
+                    <a href="https://www.counselingavenues.com/" class="externalLink">
+                        Counseling Avenues
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p style="font-size: 2vh;">
+            Copyright 2024 Ana Regalado LLC. All Rights Reserved.
+        </p>
+    </div>
+
+    <script src="Scripts/info.js"></script>
+    <script src="FormSecrets.js"></script>
+    <script>
+        const servicesOffered=[
+            "ADHD","Anger Management", "Behavioral Issues", "Bipolar Disorder",
+            "Chronic Illness", "Coping Skills", "Domestic Abuse", "Domestic Violence","Eating Disorders",
+            "Family Conflict", "Grief", "Marital and Premarital Conflict", "Prenatal/ Postpartum/ Maternal Issues",
+            "Racial Identity", "Relationship Issues", "School Issues", "Self Esteem Issues", "Sleep or Insomnia",
+            "Spirituality Issues", "Stress", "Womens' Issues", "Anxiety"
+        ]
+
+        const approaches=[
+            "Art Therapy", "Christian Counseling", "Cognitive Behavioral Therapy (CBT)", "Culturally-Sensitive Therapy",
+            "Dialectal Behavior Therapy(DBT)", "Family Systems", "Motivational Interviewing", "Person-Centered Therapy",
+            "Solution Focused Brief Therapy (SFBT)", "Strength-Based Therapy","Trauma-Focused Therapy"
+        ]
+        
+
+
+
+        
+        function resetForm() {
+            document.getElementById("apptReqForm").reset()
+        }
+
+
+        function additionalField() {
+            const selection=document.getElementById("insBox").value
+            if (selection=="Other") {
+                document.getElementById("manualInsuranceEntry").removeAttribute("hidden")
+                document.getElementById("otherIns").setAttribute("required", true)
+            }
+            else {
+                document.getElementById("manualInsuranceEntry").setAttribute("hidden", true)
+                document.getElementById("otherIns").removeAttribute("required")
+            }
+        }
+        function openForm() {
+            document.getElementById("formBackground").style.display="block"
+        }
+        function closeForm() {
+            document.getElementById("formBackground").style.display="none"
+        }
+
+
+
+        function loadListTable(tableID, numCols, array) {
+            array.sort()
+            const table=document.getElementById(tableID)
+
+            columnCounter=1
+            var currentRow
+            for (var i=0;i<array.length;i++) {
+                if (columnCounter==1) {
+                    const newRow=document.createElement("tr")
+                    currentRow=newRow
+                }
+
+
+                const cell=document.createElement("td")
+                cell.innerText=array[i]
+                currentRow.appendChild(cell)
+
+
+                if (columnCounter==numCols) {
+                    table.appendChild(currentRow)
+                    columnCounter=1
+                }
+                else {columnCounter+=1}
+
+                if ((columnCounter!=1)&&(i==array.length-1)) {
+                    table.appendChild(currentRow)
+                }
+            }
+        }
+
+        
+        function MobileChanges(x) {
+                
+            if (x.matches) {        //mobile device
+                loadListTable("serviceTable", 1, servicesOffered)
+                loadListTable("approachTable", 1, approaches)
+                document.getElementById("phoneLabel").innerText="Phone: "
+                
+            }
+            else {                  //desktop or laptop
+                loadListTable("serviceTable", 2, servicesOffered)
+                loadListTable("approachTable", 2, approaches)
+
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function(e) {
+            
+            setFormDesignations()
+            setFormAction()
+            var x=window.matchMedia("(max-width: 1024px)")
+            MobileChanges(x)
+
+        })
+    </script>
+    <script src="Scripts/FormScripts.js"></script>
+    
+</body>
+</html>

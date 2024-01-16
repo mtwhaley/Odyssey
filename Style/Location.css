@@ -1,0 +1,28 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+#Location {
+    width: 100%;
+    text-align: center;
+    font-size: 3vh;
+    margin-top: 10vh;
+    
+}
+
+iframe {
+    width: 80vw;
+    height: 40vw;
+    border: 0;
+}
+
+
+@media (max-width: 1024px) {
+    iframe {
+        width: 90vw;
+        height: 90vw;
+    }
+}

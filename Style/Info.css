@@ -1,0 +1,152 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+:root {
+    --selectedButton: rgba(171, 226, 255, 0.734);
+    --unselectedButton: #e6e6e6;
+
+}
+
+#info {
+    position: relative;
+    top: 0;
+    margin: 10vh 0 0 0;
+    width: 100%;
+    padding: 0 0 5vh 0;
+}
+
+#infoButtonTable {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap-reverse;
+        flex-wrap: wrap-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    max-width: 100%;
+}
+
+
+.infoTab {
+    border-bottom: none;
+    background-color: var(--selectedButton);
+    margin-top: 0;
+
+    position: relative;
+    top: -0.5vh;
+    height: 6vh;
+}
+
+.infoTab, .unselectedButton {
+    width: 20vh;
+    font-size: 3vh;
+    border-radius: 1vh 1vh 0 0;
+    margin: 0.5vh 0.5vh 0.2vh 0.5vh;
+    z-index: 1;
+    border: none;
+}
+
+.unselectedButton {
+    background-color: var(--unselectedButton);
+    height: 5vh;
+}
+
+.unselectedButton:hover {
+    margin-top: 0;
+
+    position: relative;
+    top: -0.5vh;
+    height: 6vh;
+}
+
+
+.infoArea {
+    width: 100%;
+    font-size: 3vh;
+    position: relative;
+    top: 1vh;
+    z-index: -1;
+
+}
+
+.infoDisplay {
+    background-color: var(--unselectedButton);
+    text-align: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1vh 0 1vh 1vh;
+    z-index: -1;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.listHeader {
+    margin-top: 2vh;
+    font-size: 3.5vh;
+
+}
+
+.listTable{
+    margin-left: auto;
+    margin-right: auto;
+    table-layout: fixed;
+    width: 100%;
+}
+.listTable tr {
+    border: 2vh solid transparent;
+    
+}
+.listTable td {
+    padding-bottom: 1vh;
+}
+.leftCell{
+    text-align: right;
+}
+.rightCell{
+    position: relative;
+    top: -0.5vh;
+    text-align: left;
+    color: #0bd611;
+    padding-left: 3vh;
+    font-weight: bold;
+}
+
+.list {
+    position: relative;
+    top: -3vh;
+    left: -3vh;
+    display: inline-block;
+    text-align: left;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+
+@media (max-width: 1024px) {
+    .infoDisplay {
+        border-radius: 1vh;
+    }
+    .infoTab, .unselectedButton {
+        width: 100%;
+        height: 6vh;
+    }
+    .infoTab {
+        height: 7vh;
+    }
+    
+    .unselectedButton:hover {
+        height: 6vh;
+        top: 0;
+        margin: 0.5vh 0.5vh 0.2vh 0.5vh;
+        background-color: rgb(224, 224, 224);
+    }
+}
