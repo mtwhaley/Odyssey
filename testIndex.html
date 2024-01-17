@@ -3,16 +3,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Ana Regalado LMSW offers mental health therapy services. 
-        Main office located in Derby, near Wichita, Kansas. 
-        Bilingual -- English and Spanish speaking. 
-        Click below for a list of services, approaches, accepted insurances, and accepted payment methods. 
-        Schedule an appointment today!">
+    <meta name="description" content="">
     <meta name="author" content="Mitchell Whaley">
     <meta name="robots" content="follow, index">
-    <meta name="keywords" content="ana regalado, therapist, LMSW, Derby, Kansas, KS, mental health, health, counseling">
+    <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Regalado LMSW</title>
+
+
+    <title>Odyssey Counseling and Consulting</title>
+    <link rel="icon" type="image/x-icon" href="Images/Favicon.png">
+
     <link rel="stylesheet" href="Style/main.css">
     <link rel="stylesheet" href="Style/TurtleEmblem.css">
     <link rel="stylesheet" href="Style/navigation.css">
@@ -21,84 +21,41 @@
     <link rel="stylesheet" href="Style/Location.css">
     <link rel="stylesheet" href="Style/Form.css">
 
+    
+
 </head>
 <body onbeforeunload="resetForm()">
+    <div style="width: 100%; height: 5vh; background-color: rgba(50,50,50,0.8); position: relative; padding-top: 1vh;">
+        <div class="menuBars" onmouseover="recolorMenuBars(this)" onmouseleave="resetMenuBars(this)" onclick="toggleSidebar()">
+            <div class="menuBar"></div>
+            <div class="menuBar"></div>
+            <div class="menuBar"></div>
+        </div>
+    </div>
     <div id="header">
-        <p>
-            <span id="Name" style="font-size: 5vh;"><u>Ana Regalado LMSW</u></span><br>
-            Derby, KS&nbsp;&nbsp;
-            &#x2022;&nbsp;&nbsp;
-            316.844.6824
-        </p>
+        <div class="pictureFrame">
+            <img src="Images/OdysseyBanner.svg" alt="Odyssey Counseling and Consulting">
+        </div>
+        
     </div>
-    <div id="qualifications">
-        <ul>
-            <li>Master of Social Work - WSU</li>
-            <li>Mental Health Therapist - Counseling Avenues</li>
-            <li>Trauma Proficient</li>
-            <li>Maternal Mental Health Certified</li>
-            <li>Bilingual -- English and Spanish</li>
 
-        </ul>
+    <div style="width: 100%; height: 60vh; overflow: hidden; position: relative;">
+        <div id="subtitle">
+            <p><b><i>Helping you navigate on your journey</i></b></p>
+        </div>
+        <img src="Images/NightShip.jpg" style="width: 100vw; height: 50vw; position: absolute; top: -10vw;">
 
     </div>
 
-    <div class="navigation">
-        <table class="navTable">
-            <tr>
-                <td><a href="#about"><button style="border-radius: 4vh 0 0 4vh;">About</button></a></td>
-                <td><a href="#info"><button>Services</button></a></td>
-                <td><a href="#Location"><button style="border-radius: 0 4vh 4vh 0;">Location</button></a></td>
-            </tr>
-        </table>
 
-    </div>
-    <div class="appointment">
-        <button class="appointmentButton" onclick="openForm()">Request Appointment</button>
-    </div>
 
-    <div class="canvas" id="about">
-        <div id="bio">
-            <p>
-                <span style="font-size: 4vh;">Welcome in!</span><br><br>
-                
-                It's no secret that life gets tough. Sometimes it can be overwhelming.
-                From time to time, we could all use some help to get us through it and as a therapist, I do just that!<br><br>
-
-                My approach is warm, honest, and client-centered. So when you come to see me, I will be non-judgmental, you will set your own goals, and we will work at your pace.
-                My goal is to help you acheive yours by navigating life's challenges and overcoming its obstacles.<br><br><br>
-
-                <b>Why me?</b><br>
-                I have practiced family therapy, couples therapy, and individual therapy.<br><br>
-                I have extensive experience in family preservation and with families who have endured a lot of trauma; this has allowed me to work with clients of all ages.<br><br>
-                My background is culturally diverse, which allows me to understand and be open-minded to any culturally-specific challenges or pressures that you may be under.<br><br>
-                I am also bilingual, fluent in English and Spanish!<br><br>
-                I know that I have never treated someone that has gone through exactly what you are going through, but that is because you are unique!
-                There is no "one-size-fits-all" or blanket treatment for what you are going through. You have your own path to walk.
-                I just want to help you stay on course!<br><br><br>
-
-                <b>Why you?</b><br>
-                I can't wait to find out!
-            </p>
-             
+    <div id="About" class="canvas">
+        <div id="Bio">
+            <p>Enter plenty of ABOUT information here</p>
         </div>
     </div>
-    <div class="returnToTop">
-        <a href="#header">return to top</a>
-    </div>
 
-    <div id="telehealth">
-        <div id="Banner">
-            <div id="BannerText"><p><i><b>Telehealth appointments also available!</b></i></p></div>
-            <div id="telehealthEmblem">
-                <div id="innerCircle">
-                    <div id="box"></div>
-                    <div id="lens"></div>
-                    <div id="lensneg"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div id="info">
         <div class="verticalFlex">
@@ -162,29 +119,22 @@
             </div>
         </div>
     </div>
-    
+
+
     <div class="appointment">
         <button class="appointmentButton" onclick="openForm()">Request Appointment</button>
     </div>
 
-    <div id="Location">
-        <p>Primary Location:</p>
-        <p>
-            <span style="font-size: larger;">Counseling Avenues</span><br>
-            1721 E Osage Rd #100<br>
-            Derby, KS 67037<br>
 
-        </p>
-        <div id="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d790.864030613131!2d-97.24541753879956!3d37.54431613806754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87baeffe7ca45d27%3A0x7c777f4d2084120!2sCounseling%20Avenues%20LLC!5e0!3m2!1sen!2sus!4v1703995559579!5m2!1sen!2sus"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+
+
+
+
+    <div id="sidebar">
+        <ul>
+            <li>About</li>
+        </ul>
     </div>
-    <div class="returnToTop" style="margin-top: 3vh;">
-        <a href="#header">return to top</a>
-    </div>
- 
-
-
 
     <div id="formBackground">
         <div id="formArea">
@@ -245,125 +195,7 @@
         </div>
         <button id="closeButton" onclick="closeForm()">&times;</button>
     </div>
-    <div class="Photo">
-        <img src="Images/Ana-photo.JPG" id="headshot" alt="Ana Regalado, bilingual therapist in Derby, Kansas, profile picture">
-    </div>
 
-    <div class="TurtleFam">
-        <div id="Turtle1">
-            <div id="turtleShell"></div>
-            <div id="turtleLeftLeg">
-                <div id="turtleLegFin"></div>
-                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
-                <div id="turtleFoot"></div>
-            </div>
-            <div id="turtleRightLeg">
-                <div id="turtleLegFin"></div>
-                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
-                <div id="turtleFoot"></div>
-            </div>
-            <div id="turtleLeftArm">
-                <div id="turtleLegFin"></div>
-                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
-                <div id="turtleFoot"></div>
-            </div>
-            <div id="turtleRightArm">
-                <div id="turtleLegFin"></div>
-                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
-                <div id="turtleFoot"></div>
-            </div>
-            <div id="turtleHead"></div>
-        </div>
-        <div id="Turtle2">
-            <div id="turtleShell"></div>
-            <div id="turtleLeftLeg">
-                <div id="turtleLegFin"></div>
-                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
-                <div id="turtleFoot"></div>
-            </div>
-            <div id="turtleRightLeg">
-                <div id="turtleLegFin"></div>
-                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
-                <div id="turtleFoot"></div>
-            </div>
-            <div id="turtleLeftArm">
-                <div id="turtleLegFin"></div>
-                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
-                <div id="turtleFoot"></div>
-            </div>
-            <div id="turtleRightArm">
-                <div id="turtleLegFin"></div>
-                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
-                <div id="turtleFoot"></div>
-            </div>
-            <div id="turtleHead"></div>
-        </div>
-        <div id="Turtle3">
-            <div id="turtleShell"></div>
-            <div id="turtleLeftLeg">
-                <div id="turtleLegFin"></div>
-                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
-                <div id="turtleFoot"></div>
-            </div>
-            <div id="turtleRightLeg">
-                <div id="turtleLegFin"></div>
-                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
-                <div id="turtleFoot"></div>
-            </div>
-            <div id="turtleLeftArm">
-                <div id="turtleLegFin"></div>
-                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
-                <div id="turtleFoot"></div>
-            </div>
-            <div id="turtleRightArm">
-                <div id="turtleLegFin"></div>
-                <div id="turtleLegNeg1"></div><div id="turtleLegNeg2"></div><div id="turtleLegNeg3"></div>
-                <div id="turtleFoot"></div>
-            </div>
-            <div id="turtleHead"></div>
-        </div>
-    </div>
-
-
-
-<!--
-    <div id="footer">
-        <p style="width: 100%; margin-bottom: 2vh;">Get more info!<hr></p>
-        <div id="footerFlex">
-            <span style="min-width: 30%;">
-                <a href="https://www.psychologytoday.com/us/therapists/ana-gabriela-regalado-derby-ks/1011608" style="font-weight: bold;">
-                    Psychology Today Profile
-                </a>
-            </span>
-            <span style="min-width: 30%;">&#x2022;</span>
-            <span style="min-width: 30%;">
-                <a href="https://www.counselingavenues.com/" style="font-weight: bold;">
-                    Counseling Avenues
-                </a>
-            </span>
-        </div>
-    </div>
--->
-
-    <div id="footer" style="text-align: right; padding-right: 2vw;">
-        <div style="text-align: center;">
-            <ul style="list-style: none; margin-bottom: 0; margin-top: 0;">
-                <li style="padding-bottom: 1vh;">
-                    <a href="https://www.psychologytoday.com/us/therapists/ana-gabriela-regalado-derby-ks/1011608" class="externalLink">
-                        Psychology Today
-                    </a>
-                </li>
-                <li style="padding-bottom: 1vh;">
-                    <a href="https://www.counselingavenues.com/" class="externalLink">
-                        Counseling Avenues
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <p style="font-size: 2vh;">
-            Copyright 2024 Ana Regalado LLC. All Rights Reserved.
-        </p>
-    </div>
 
     <script src="Scripts/info.js"></script>
     <script src="FormSecrets.js"></script>
@@ -371,9 +203,9 @@
         const servicesOffered=[
             "ADHD","Anger Management", "Behavioral Issues", "Bipolar Disorder",
             "Chronic Illness", "Coping Skills", "Domestic Abuse", "Domestic Violence","Eating Disorders",
-            "Family Conflict", "Grief", "Marital and Premarital Conflict", "Prenatal/ Postpartum/ Maternal Issues",
+            "Family Conflict", "Grief", "Marital and Premarital Conflict",
             "Racial Identity", "Relationship Issues", "School Issues", "Self Esteem Issues", "Sleep or Insomnia",
-            "Spirituality Issues", "Stress", "Womens' Issues", "Anxiety"
+            "Spirituality Issues", "Stress", "Mens' Issues", "Anxiety"
         ]
 
         const approaches=[
@@ -383,7 +215,34 @@
         ]
         
 
+        function toggleSidebar() {
+            const sidebar=document.getElementById("sidebar")
+            const rect=sidebar.getBoundingClientRect()
+            var toggle=""
+            if (rect.left<0) {
+                toggle="display"
 
+            }
+            else {
+                toggle="hide"
+            }
+            sidebar.style.animation=toggle+"Sidebar 1s ease 0s 1 normal forwards"
+
+        }
+
+        function recolorMenuBars(bars) {
+            const all=bars.getElementsByTagName("div")
+            for (var i=0;i<all.length;i++) {
+                all[i].style.backgroundColor="gray"
+            }
+        }
+
+        function resetMenuBars(bars) {
+            const all=bars.getElementsByTagName("div")
+            for (var i=0;i<all.length;i++) {
+                all[i].style.backgroundColor="black"
+            }
+        }
 
         
         function resetForm() {
@@ -458,7 +317,7 @@
         }
 
         document.addEventListener("DOMContentLoaded", function(e) {
-            
+
             setFormDesignations()
             setFormAction()
             var x=window.matchMedia("(max-width: 1024px)")
