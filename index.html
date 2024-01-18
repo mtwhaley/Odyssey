@@ -130,11 +130,25 @@
 
 
 
-
-    <div id="sidebar">
-        <ul>
-            <li>About</li>
-        </ul>
+    <div id="sidebarDiv">
+        <div id="sidebar">
+            <ul>
+                <li>
+                    <button class="navigationButton">Home</button>
+                </li>
+                <li>
+                    <button class="navigationButton">Services</button>
+                </li>
+                <li>
+                    <button class="navigationButton">Meet the Therapist</button>
+                </li>
+                <li>
+                    <button class="navigationButton">Request Appointment</button>
+                </li>
+            </ul>
+            
+        </div>
+        <button id="sidebarClose" onclick="toggleSidebar()">&times;</button>
     </div>
 
     <div id="formBackground">
@@ -200,6 +214,7 @@
 
     <script src="Scripts/info.js"></script>
     <script src="FormSecrets.js"></script>
+    <script src="SidebarModule/Sidebar.js"></script>
     <script>
         const servicesOffered=[
             "ADHD","Anger Management", "Behavioral Issues", "Bipolar Disorder",
@@ -216,34 +231,6 @@
         ]
         
 
-        function toggleSidebar() {
-            const sidebar=document.getElementById("sidebar")
-            const rect=sidebar.getBoundingClientRect()
-            var toggle=""
-            if (rect.left<0) {
-                toggle="display"
-
-            }
-            else {
-                toggle="hide"
-            }
-            sidebar.style.animation=toggle+"Sidebar 1s ease 0s 1 normal forwards"
-
-        }
-
-        function recolorMenuBars(bars) {
-            const all=bars.getElementsByTagName("div")
-            for (var i=0;i<all.length;i++) {
-                all[i].style.backgroundColor="gray"
-            }
-        }
-
-        function resetMenuBars(bars) {
-            const all=bars.getElementsByTagName("div")
-            for (var i=0;i<all.length;i++) {
-                all[i].style.backgroundColor="black"
-            }
-        }
 
         
         function resetForm() {

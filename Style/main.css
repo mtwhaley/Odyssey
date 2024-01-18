@@ -24,54 +24,6 @@ a {
     text-decoration: underline;
 }
 
-@keyframes displaySidebar {
-    from {
-        left: -400px;
-    }
-    to {
-        left: 0;
-    }
-}
-@keyframes hideSidebar {
-    from {
-        left: 0;
-    }
-    to {
-        left: -400px;
-    }
-    
-}
-
-#sidebar{
-    position: fixed;
-    width: 400px;
-    height: 100vh;
-    background-color: #595959;
-    z-index: 100;
-    top: 0;
-    text-align: right;
-    color: white;
-    font-size: 2vw;
-    left: -400px;
-}
-#sidebar ul {
-    margin-right: 40px;
-    font-weight: bold;
-    list-style: none;
-}
-
-.menuBars{
-    position: absolute;
-    right: 1vw;
-}
-
-.menuBar{
-    width: 35px;
-    height: 5px;
-    background-color: black;
-    margin: 0 0 6px 0;
-    border-radius: 1vh;
-}
 
 #header {
     width: 100%;

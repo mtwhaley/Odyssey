@@ -1,43 +1,19 @@
 /*
-Add to HTML:
-
+Add to HTML as first element:
+    <div class="topBar">
+        <div class="menuBars" onmouseover="recolorMenuBars(this)" onmouseleave="resetMenuBars(this)" onclick="toggleSidebar()">
+            <div class="menuBar"></div>
+            <div class="menuBar"></div>
+            <div class="menuBar"></div>
+        </div>
+    </div>
     <div id="sidebar">
         <ul>
-            <li>About</li>
+            <li>
+                <button class="navigationButton">About</button>
+            </li>
         </ul>
     </div>
-    
-Add to JS:
-
-    function toggleSidebar() {
-        const sidebar=document.getElementById("sidebar")
-        const rect=sidebar.getBoundingClientRect()
-        var toggle=""
-        if (rect.left<0) {
-            toggle="display"
-
-        }
-        else {
-            toggle="hide"
-        }
-        sidebar.style.animation=toggle+"Sidebar 1s ease 0s 1 normal forwards"
-
-    }
-
-    function recolorMenuBars(bars) {
-        const all=bars.getElementsByTagName("div")
-        for (var i=0;i<all.length;i++) {
-            all[i].style.backgroundColor="gray"
-        }
-    }
-
-    function resetMenuBars(bars) {
-        const all=bars.getElementsByTagName("div")
-        for (var i=0;i<all.length;i++) {
-            all[i].style.backgroundColor="black"
-        }
-    }
-
 */
 
 
@@ -60,6 +36,20 @@ Add to JS:
     
 }
 
+.navigationButton {
+    width: 100%;
+    height: 100%;
+    padding-right: 5vh;
+    border: none;
+    font-size: 3.5vh;
+    text-align: right;
+    color: white;
+    background-color: rgba(0,0,0,0);
+}
+.navigationButton:hover {
+    background-color: #bababa;
+}
+
 .topBar {
     width: 100%;
     height: 5vh;
@@ -67,23 +57,63 @@ Add to JS:
     position: relative;
     padding-top: 1vh;
 }
-
-#sidebar{
+#sidebarDiv {
     position: fixed;
-    width: 400px;
+    width: 350px;
+    max-width: 70vw;
     height: 100vh;
-    background-color: #595959;
     z-index: 100;
     top: 0;
     text-align: right;
     color: white;
-    font-size: 2vw;
+    font-size: 4vh;
     left: -400px;
+    padding: 0;
+
+}
+
+
+#sidebarClose {
+    position: absolute;
+    top: -0.6vh;
+    right: -40px;
+    width: 50px;
+    height: 50px;
+    background-color: #383838;
+    border: 0.6vh solid black;
+    border-radius: 0 2vh 2vh 0;
+    z-index: -1;
+    text-align: right;
+    font-size: 30px;
+    color: white
+}
+#sidebarClose:hover {
+    background-color: #bababa;
+}
+
+#sidebar{
+    margin-top: -2vh;
+    width: 100%;
+    height: 100%;
+    background-color: #263052;
+    text-align: right;
+    color: white;
+    font-size: 4vh;
+    left: -400px;
+    border-right: 0.8vh solid #595959;
+    border-radius: 0 2vh 0 0;
+
 }
 #sidebar ul {
-    margin-right: 40px;
+    margin: 2vh 0 0 0;
+    padding-top: 3vh;
     font-weight: bold;
     list-style: none;
+}
+
+#sidebar li {
+    margin: 2vh 0 0 0;
+    height: 5vh;
 }
 
 .menuBars{
