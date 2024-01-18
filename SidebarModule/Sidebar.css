@@ -20,7 +20,7 @@ Add to HTML as first element:
 
 @keyframes displaySidebar {
     from {
-        left: -400px;
+        left: -500px;
     }
     to {
         left: 0;
@@ -31,7 +31,7 @@ Add to HTML as first element:
         left: 0;
     }
     to {
-        left: -400px;
+        left: -500px;
     }
     
 }
@@ -59,7 +59,7 @@ Add to HTML as first element:
 }
 #sidebarDiv {
     position: fixed;
-    width: 350px;
+    width: 450px;
     max-width: 70vw;
     height: 100vh;
     z-index: 100;
@@ -67,7 +67,7 @@ Add to HTML as first element:
     text-align: right;
     color: white;
     font-size: 4vh;
-    left: -400px;
+    left: -500px;
     padding: 0;
 
 }
@@ -79,8 +79,7 @@ Add to HTML as first element:
     right: -40px;
     width: 50px;
     height: 50px;
-    background-color: #383838;
-    border: 0.6vh solid black;
+    background-color: red;/*#383838;*/
     border-radius: 0 2vh 2vh 0;
     z-index: -1;
     text-align: right;

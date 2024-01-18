@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="Mitchell Whaley">
+    <meta name="robots" content="follow, index">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>Odyssey Counseling and Consulting</title>
+    <link rel="icon" type="image/x-icon" href="Images/Favicon.png">
+
+    <link rel="stylesheet" href="Style/main.css">
+    <link rel="stylesheet" href="Style/navigation.css">
+    <link rel="stylesheet" href="Style/Info.css">
+    <link rel="stylesheet" href="Style/Telehealth.css">
+    <link rel="stylesheet" href="Style/Location.css">
+    <link rel="stylesheet" href="Style/Form.css">
+    <link rel="stylesheet" href="SidebarModule/Sidebar.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="topBar">
+        <div class="menuBars" onmouseover="recolorMenuBars(this)" onmouseleave="resetMenuBars(this)" onclick="toggleSidebar()">
+            <div class="menuBar"></div>
+            <div class="menuBar"></div>
+            <div class="menuBar"></div>
+        </div>
+    </div>
+    <div id="sidebarDiv">
+        <div id="sidebar">
+            <ul>
+                <li>
+                    <a href="index.html"><button class="navigationButton">Home</button></a>
+                </li>
+                <li>
+                    <a href="Services.html"><button class="navigationButton">Services</button></a>
+                </li>
+                <li>
+                    <button class="navigationButton">Meet the Therapist</button>
+                </li>
+                <li>
+                    <button class="navigationButton">Request Appointment</button>
+                </li>
+            </ul>
+            
+        </div>
+        <button id="sidebarClose" onclick="toggleSidebar()">&times;</button>
+    </div>
+
+    <div id="header">
+        <div class="pictureFrame">
+            <img src="Images/OdysseyBanner.svg" alt="Odyssey Counseling and Consulting">
+        </div>
+        
+    </div>
+
+
+    <div id="formArea" style="position: static; overflow: hidden; margin: 15vh auto 0 auto;padding-bottom: 5vh;">
+        <p style="margin-bottom: 2vh; margin-top: 3vh; font-size: larger;">Request an appointment</p>
+        <form id="apptReqForm" onsubmit="return validate()">
+            <table id="formTable">
+                <tr>
+                    <td><label for="fname">First Name: </label></td>
+                    <td><input type="text" name="fname" id="fname" required></td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Last Name: </label></td>
+                    <td><input type="text" name="lname" id="lname" required></td>
+                </tr>
+                <tr>
+                    <td><label for="phone" id="phoneLabel">Phone Number: </label></td>
+                    <td><input type="tel" name="phone" id="phone" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">email: </label></td>
+                    <td><input type="email" name="email" id="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="insBox">Insurance: </label></td>
+                    <td>
+                        <select name="insBox" id="insBox" onchange="additionalField()" required>
+                            <option value="BC/BS">Blue Cross / Blue Shield</option>
+                            <option value="Sunflower">Sunflower</option>
+                            <option value="Medicaid">Medicaid</option>
+                            <option value="proviDrs">proviDrs</option>
+                            <option value="Aetna">Aetna</option>
+                            <option value="Other">Other</option>
+                            <option value="None">None</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;font-size: 2.8vh;padding-top: 2vh;">
+                        <div id="manualInsuranceEntry" hidden>
+                            <label for="otherIns" id="otherInsLabel">Please enter other insurance: </label><br>
+                            <input type="text" name="otherIns" id="otherIns">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;font-size: 2.8vh;">
+                        <label for="message">Is there anything that you would like me to know?</label><br>
+                        <textarea name="message" id="message" style="width: 95%;" rows="5"></textarea>
+                    </td>
+                </tr>
+
+            </table> 
+            <input type="text" id="ins" hidden>
+            <input type="submit" id="submitForm" value="Submit">
+        </form>
+        
+        
+    </div>
+
+
+    <div id="footer" style="text-align: right; padding-right: 2vw;">
+        <div class="footNavigation">
+            <a href="index.html"><button>Home</button></a>
+            |
+            <a href="Services.html"><button>Services</button></a>
+            |
+            <button>Therapist</button>
+            |
+            <button>Appointments</button>
+        </div>
+        <span style="font-size: 2vh;">
+            <br>
+            Copyright 2024 Ana Regalado LLC. All Rights Reserved.
+        </span>
+        
+    </div>
+
+
+    <script src="SidebarModule/Sidebar.js"></script>
+    <script>
+        function additionalField() {
+            const selection=document.getElementById("insBox").value
+            if (selection=="Other") {
+                document.getElementById("manualInsuranceEntry").removeAttribute("hidden")
+                document.getElementById("otherIns").setAttribute("required", true)
+            }
+            else {
+                document.getElementById("manualInsuranceEntry").setAttribute("hidden", true)
+                document.getElementById("otherIns").removeAttribute("required")
+            }
+        }
+
+        function MobileChanges(x) {
+                
+            if (x.matches) {        //mobile device
+                document.getElementById("phoneLabel").innerText="Phone: "
+                
+            }
+            else {                  //desktop or laptop
+
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function(e) {
+
+            //setFormDesignations()
+            //setFormAction()
+            var x=window.matchMedia("(max-width: 1024px)")
+            MobileChanges(x)
+
+        })
+        
+    </script>
+</body>
+</html>
