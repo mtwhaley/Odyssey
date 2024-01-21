@@ -127,3 +127,9 @@ Add to HTML as first element:
     margin: 0 0 6px 0;
     border-radius: 1vh;
 }
+
+@media (max-width: 1024px) {
+    .navigationButton {
+        font-size: 3vh;
+    }
+}
