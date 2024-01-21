@@ -60,7 +60,7 @@ Add to HTML as first element:
 #sidebarDiv {
     position: fixed;
     width: 450px;
-    max-width: 70vw;
+    max-width: 75vw;
     height: 100vh;
     z-index: 100;
     top: 0;
