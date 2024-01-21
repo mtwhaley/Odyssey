@@ -162,6 +162,13 @@ hr {
 
 
 @media (max-width: 1024px) {
+    #subtitle {
+        font-size: 5vw;
+        letter-spacing: 0.25vw;
+    }
+    .canvas {
+        margin-top: -20vh;
+    }
 
     #footerFlex {
         flex-direction: column;
@@ -176,7 +183,6 @@ hr {
     .appointment {
         width: 70vw;
         height: 8vh;
-        margin-top: 0;
         
     }
     .Photo {
