@@ -11,6 +11,12 @@ Add to HTML as first element:
         <div id="sidebar"></div>
         <button id="sidebarClose" onclick="toggleSidebar()">&times;</button>
     </div>
+
+
+For footer Navigation:
+    <div id="footer" style="text-align: right; padding-right: 2vw;">
+        <div id="footNavInjection"></div>        
+    </div>
 */
 
 

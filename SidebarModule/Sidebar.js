@@ -10,15 +10,50 @@ navigation={
     },
     "meet": {
         sidebarText: "Meet your Counselor",
+        footerText: "Counselors",
         href: "Meet.html"
     },
     "appointment": {
-        sidebarText: "Request an Appointment",
+        sidebarText: "Take the next step",
+        footerText: "Appointments",
         href: "Appointment.html"
 
     }
     
 }
+
+function addFooterNavigation() {
+    const injectionPoint=document.getElementById("footNavInjection")
+    var first=true
+    if (injectionPoint!=null) {
+        const div=document.createElement("div")
+        div.setAttribute("class", "footNavigation")
+
+        Object.keys(navigation).forEach(function(key) {
+            if (first==false) {div.append("|")}
+            else {first=false}
+
+            const object=navigation[key]
+            const anchor=document.createElement("a")
+            const button=document.createElement("button")
+
+            anchor.setAttribute("href", object.href)
+            if (object.footerText!=undefined) {
+                button.innerText=object.footerText
+            }
+            else {
+                button.innerText=object.sidebarText
+            }
+            console.log(button.innerText)
+            anchor.appendChild(button)
+            div.appendChild(anchor)
+
+        })
+
+        injectionPoint.appendChild(div)
+    }
+}
+
 function fillSidebar() {
     const sidebar=document.getElementById("sidebar")
     if (sidebar!=null) {
@@ -79,3 +114,4 @@ function resetMenuBars(bars) {
 }
 
 fillSidebar()
+addFooterNavigation()
