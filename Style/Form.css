@@ -69,12 +69,12 @@ form {
     font-size: 3vh;
     border-radius: 4vh;
     border: none;
-    background-color: #3acf4b;
+    background-color: #58bfd6;
     border: 0.5vh solid #ababab;
 }
 
 #submitForm:hover{
-    background-color: #c5facc;
+    background-color: #bbe8f2;
 }
 
 #outerFormDiv {

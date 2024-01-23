@@ -55,7 +55,7 @@ a {
 }
 
 .counselorInfo {
-    background-color: var(--section-color);
+    background-color: #def9fa;
     text-align: center;
     margin-top: 5vh;
     margin-left: auto;
@@ -139,14 +139,14 @@ hr {
 .appointmentButton {
     width: 100%;
     height: 100%;
-    background-color: #3acf4b;
+    background-color: #58bfd6;
     border-radius: 4vh;
     border: 0.5vh solid #ababab;
     font-size: 3vh;
     color: black;
 }
 .appointmentButton:hover {
-    background-color: #c5facc;
+    background-color: #bbe8f2;
 }
 
 .canvas {
