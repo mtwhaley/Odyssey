@@ -54,6 +54,19 @@ a {
 
 }
 
+.counselorInfo {
+    background-color: var(--section-color);
+    text-align: center;
+    margin-top: 5vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5vh;
+    border-radius: 2vh;
+    font-size: 3vh;
+    padding-top: 0.1vh;
+    width: 60vw;
+}
+
 #footer {
     margin-top: 15vh;
     margin-bottom: 0;
@@ -83,28 +96,27 @@ hr {
     font-size: 3vh;
 }
 
+#PhotoDiv {
+    text-align: center;
+    font-size: 3vh;
+}
+
 .Photo {
-    position: absolute;
-    height: 30vh;
-    width: 30vh;
+    height: 40vh;
+    width: 40vh;
     overflow: hidden;
-    border-radius: 50%;
-    border: 1vh solid #abfeff;
-    top: 20%;
-    left: 8%;
+    margin: 10vh auto 0 auto;
+    
 
     
 }
 
 #headshot {
     position: relative;
-    height: 150%;
-    width: 120%;
-    top: -1%;
+    height: 170%;
+    width: 100%;
+    top: -15%;
     left: 1%;
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
 }
 
 #qualifications {
@@ -185,11 +197,8 @@ hr {
         height: 8vh;
         
     }
-    .Photo {
-        width: 50vw;
-        height: 50vw;
-        left: 24vw;
-        top: 15vh;
+    .counselorInfo {
+        width: 100%;
     }
 
 
