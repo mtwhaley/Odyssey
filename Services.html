@@ -31,23 +31,7 @@
         </div>
     </div>
     <div id="sidebarDiv">
-        <div id="sidebar">
-            <ul>
-                <li>
-                    <a href="../Odyssey/"><button class="navigationButton">Home</button></a>
-                </li>
-                <li>
-                    <a href="Services.html"><button class="navigationButton">Services</button></a>
-                </li>
-                <li>
-                    <a href="Meet.html"><button class="navigationButton">Meet the Therapist</button></a>
-                </li>
-                <li>
-                    <a href="Appointment.html"><button class="navigationButton">Request Appointment</button></a>
-                </li>
-            </ul>
-            
-        </div>
+        <div id="sidebar"></div>
         <button id="sidebarClose" onclick="toggleSidebar()">&times;</button>
     </div>
 
@@ -74,7 +58,7 @@
             <div id="serviceInfo" class="infoDisplay">
                 <p class="listHeader">Services provided for:<hr></p>
                 <table class="listTable" style="width: 90%;" id="serviceTable"></table>
-                <p>and more!</p>
+                <p>and much more!</p>
             </div>
 
             <div id="approachInfo" class="infoDisplay">
@@ -84,39 +68,46 @@
             </div>
 
             <div id="insuranceInfo" class="infoDisplay">
-                <p class="listHeader">Accepted Insurances:<hr></p>
+                <p class="listHeader">Accepted Insurance:<hr></p>
                 <table class="listTable">
                     <tr>
                         <td class="leftCell">Blue Cross / Blue shield</td>
                         <td class="rightCell">&#x2713;</td>
                     </tr>
                     <tr>
-                        <td class="leftCell">Sunflower</td>
+                        <td class="leftCell">Sunflower Medicaid/Ambetter</td>
                         <td class="rightCell">&#x2713;</td>
                     </tr>
                     <tr>
-                        <td class="leftCell">Medicaid</td>
+                        <td class="leftCell">Optum Medicaid</td>
                         <td class="rightCell">&#x2713;</td>
                     </tr>
                     <tr>
-                        <td class="leftCell">proviDrs</td>
+                        <td class="leftCell">WPPA/proviDrs Care</td>
                         <td class="rightCell">&#x2713;</td>
-                    </tr>
-                    <tr>
-                        <td class="leftCell">Aetna</td>
-                        <td class="rightCell">&#x2713;</td>
-                    </tr>              
+                    </tr>  
                 </table>
                 <p> </p>
             </div>
 
             <div id="paymentInfo" class="infoDisplay">
-                <p class="listHeader">Accepted methods of payment:<hr></p>
+                <p class="listHeader">Payment methods:<hr></p>
                 <ul class="list">
-                    <li>Visa</li>
-                    <li>Mastercard</li>
-                    <li>cash</li>
-                    <li>check</li>
+                    <table class="listTable">
+                        <tr>
+                            <td class="leftCell">Visa</td>
+                            <td class="rightCell"></td>
+                        </tr>
+                        <tr>
+                            <td class="leftCell">Mastercard</td>
+                        </tr>
+                        <tr>
+                            <td class="leftCell">Cash</td>
+                        </tr>
+                        <tr>
+                            <td class="leftCell">Check</td>
+                        </tr>
+                    </table>
                 </ul>
             </div>
         </div>
@@ -146,14 +137,14 @@
     <script>
         const servicesOffered=[
             "ADHD","Anger Management", "Behavioral Issues", "Bipolar Disorder",
-            "Chronic Illness", "Coping Skills", "Domestic Abuse", "Domestic Violence","Eating Disorders",
-            "Family Conflict", "Grief", "Marital and Premarital Conflict",
-            "Racial Identity", "Relationship Issues", "School Issues", "Self Esteem Issues", "Sleep or Insomnia",
-            "Spirituality Issues", "Stress", "Mens' Issues", "Anxiety"
+            "Coping Skills", "Depression", "Domestic Violence","Eating Disorders",
+            "Grief", "Racial Identity", "Relationship Issues", "Self Esteem Issues",
+            "Sleep or Insomnia", "Spirituality Issues", "Personal Growth and Development",
+            "Trauma and PTSD", "Mens' Issues", "Anxiety and Stress Management"
         ]
 
         const approaches=[
-            "Art Therapy", "Christian Counseling", "Cognitive Behavioral Therapy (CBT)", "Culturally-Sensitive Therapy",
+            "Christian Counseling", "Cognitive Behavioral Therapy (CBT)", "Culturally-Sensitive Therapy",
             "Dialectal Behavior Therapy(DBT)", "Family Systems", "Motivational Interviewing", "Person-Centered Therapy",
             "Solution Focused Brief Therapy (SFBT)", "Strength-Based Therapy","Trauma-Focused Therapy"
         ]
