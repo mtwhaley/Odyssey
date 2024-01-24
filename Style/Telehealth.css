@@ -6,7 +6,7 @@
 */
 
 :root{
-    --emblemColor: #abfeff;
+    --emblemColor: #58bfd6;
 }
 
 #telehealth {
@@ -78,7 +78,7 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    background-color: #abfeff;
+    background-color: var(--emblemColor);
     width: 95%;
     height: 15vh;
     border-radius: 2vh;
