@@ -2,7 +2,7 @@
 navigation={
     "home": {
         sidebarText: "Home",
-        href: "/Odyessy"
+        href: "/Odyessy/"
     },
     "services": {
         sidebarText: "Services",
