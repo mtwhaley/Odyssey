@@ -31,6 +31,18 @@ a {
     
     
 }
+#shipBanner {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+}
+#shipImg {
+    width: 100vw;
+    height: 60vh;
+    position: absolute;
+}
+
 #subtitle {
     position: absolute;
     margin-left: auto;
@@ -170,6 +182,9 @@ hr {
 
 
 @media (max-width: 1024px) {
+    #shipBanner, #shipImg {
+        height: 50vw;
+    }
     .Photo {
         width: 100%;
     }

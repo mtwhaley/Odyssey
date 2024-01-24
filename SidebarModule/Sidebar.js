@@ -4,10 +4,6 @@ navigation={
         sidebarText: "Home",
         href: "/Odyssey/"
     },
-    "services": {
-        sidebarText: "Services",
-        href: "Services.html"
-    },
     "meet": {
         sidebarText: "Meet your Counselor",
         footerText: "Counselors",
@@ -15,9 +11,8 @@ navigation={
     },
     "appointment": {
         sidebarText: "Take the next step",
-        footerText: "Appointments",
+        footerText: "Appointment",
         href: "Appointment.html"
-
     }
     
 }
@@ -33,20 +28,36 @@ function addFooterNavigation() {
             if (first==false) {div.append("|")}
             else {first=false}
 
-            const object=navigation[key]
-            const anchor=document.createElement("a")
-            const button=document.createElement("button")
+            //special case for pop up instead of link
+            if (key=="appointment") { 
+                const object=navigation[key]
+                const button=document.createElement("button")
 
-            anchor.setAttribute("href", object.href)
-            if (object.footerText!=undefined) {
-                button.innerText=object.footerText
+                button.onclick=function() {openForm()}
+
+                if (object.footerText!=undefined) {
+                    button.innerText=object.footerText
+                }
+                else {
+                    button.innerText=object.sidebarText
+                }
+                div.appendChild(button)
             }
             else {
-                button.innerText=object.sidebarText
+                const object=navigation[key]
+                const anchor=document.createElement("a")
+                const button=document.createElement("button")
+
+                anchor.setAttribute("href", object.href)
+                if (object.footerText!=undefined) {
+                    button.innerText=object.footerText
+                }
+                else {
+                    button.innerText=object.sidebarText
+                }
+                anchor.appendChild(button)
+                div.appendChild(anchor)
             }
-            console.log(button.innerText)
-            anchor.appendChild(button)
-            div.appendChild(anchor)
 
         })
 
@@ -60,20 +71,37 @@ function fillSidebar() {
         const containerDiv=document.createElement("div")
         containerDiv.setAttribute("class", "navItemContainer")
         Object.keys(navigation).forEach(function(key) {
-            const object=navigation[key]
-            
-            const anchor=document.createElement("a")
-            const div=document.createElement("div")
-            const button=document.createElement("button")
+            if (key=="appointment") { 
+                const object=navigation[key]
+                const button=document.createElement("button")
+                button.setAttribute("class", "navigationButton")
 
-            div.setAttribute("class", "navItem")
-            anchor.setAttribute("href", object.href)
-            button.setAttribute("class", "navigationButton")
-            button.innerText=object.sidebarText
-            
-            anchor.appendChild(button)
-            
-            containerDiv.appendChild(anchor)
+                button.onclick=function() {openForm()}
+
+                if (object.footerText!=undefined) {
+                    button.innerText=object.footerText
+                }
+                else {
+                    button.innerText=object.sidebarText
+                }
+                containerDiv.appendChild(button)
+            }
+            else {
+                const object=navigation[key]
+                
+                const anchor=document.createElement("a")
+                const div=document.createElement("div")
+                const button=document.createElement("button")
+
+                div.setAttribute("class", "navItem")
+                anchor.setAttribute("href", object.href)
+                button.setAttribute("class", "navigationButton")
+                button.innerText=object.sidebarText
+                
+                anchor.appendChild(button)
+                
+                containerDiv.appendChild(anchor)
+            }
         })
 
         sidebar.appendChild(containerDiv)

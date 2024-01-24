@@ -15,6 +15,7 @@
 
     <link rel="stylesheet" href="Style/main.css">
     <link rel="stylesheet" href="Style/navigation.css">
+    <link rel="stylesheet" href="Style/Info.css">
     <link rel="stylesheet" href="Style/Telehealth.css">
     <link rel="stylesheet" href="Style/Location.css">
     <link rel="stylesheet" href="Style/Form.css">
@@ -38,17 +39,17 @@
         
     </div>
 
-    <div style="width: 100%; height: 60vh; overflow: hidden; position: relative;">
+    <div id="shipBanner">
         <div id="subtitle">
             <p><b><i>Helping you navigate your mental health journey</i></b></p>
         </div>
-        <img src="Images/NightShip.jpg" style="width: 100vw; height: 50vw; position: absolute; top: -10vw;">
+        <img src="Images/NightShip.jpg" id="shipImg">
 
     </div>
 
 
 
-    <div id="About" class="canvas" style="margin-top: 0;">
+    <div id="About" class="canvas" style="margin-top: 0; border-radius: 0">
         <div id="bio">
             <h1>Welcome to Odyssey Counseling and Consulting!</h1>
             <h3>Your Journey to Wellness Starts Here.</h3>
@@ -76,6 +77,86 @@
     <div class="appointment">
         <button class="appointmentButton" onclick="openForm()">Request Appointment</button>
     </div>
+
+
+    <div id="info">
+        <div class="verticalFlex">
+            <div id="infoButtonTable">
+                <button id="servicesButton" class="infoTab">Services</button>
+                <button id="approachesButton" class="unselectedButton">Approaches</button>
+                <button id="insuranceButton" class="unselectedButton">Insurance</button>
+                <button id="paymentButton" class="unselectedButton">Payment</button>
+
+            </div>
+        </div>
+        <div class="infoArea">
+
+            <div id="serviceInfo" class="infoDisplay">
+                <p class="listHeader" style="margin-left: 5vh; margin-right: 5vh;">We offer a range of services to meet your unique needs, including individual therapy, couples
+                    counseling, and family therapy. Our therapists are trained in a variety of evidence-based
+                    approaches, and we work collaboratively with you to identify strengths and develop a treatment
+                    plan that is tailored to your specific needs.
+                    <hr></p>
+                <table class="listTable" style="width: 90%;" id="serviceTable"></table>
+                <p>and much more!</p>
+            </div>
+
+            <div id="approachInfo" class="infoDisplay">
+                <p class="listHeader">Approaches:<hr></p>
+                <table class="listTable" style="width: 90%;" id="approachTable"></table>
+                <p> </p>
+            </div>
+
+            <div id="insuranceInfo" class="infoDisplay">
+                <p class="listHeader">Accepted Insurance:<hr></p>
+                <table class="listTable">
+                    <tr>
+                        <td class="leftCell">Blue Cross / Blue shield</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td class="leftCell">Sunflower Medicaid/Ambetter</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td class="leftCell">Optum Medicaid</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td class="leftCell">WPPA/proviDrs Care</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>
+                    <tr>
+                        <td class="leftCell">Aetna</td>
+                        <td class="rightCell">&#x2713;</td>
+                    </tr>  
+                </table>
+                <p> </p>
+            </div>
+
+            <div id="paymentInfo" class="infoDisplay">
+                <p class="listHeader">Payment methods:<hr></p>
+                <ul class="list">
+                    <table class="listTable">
+                        <tr>
+                            <td class="leftCell">Visa</td>
+                            <td class="rightCell"></td>
+                        </tr>
+                        <tr>
+                            <td class="leftCell">Mastercard</td>
+                        </tr>
+                        <tr>
+                            <td class="leftCell">Cash</td>
+                        </tr>
+                        <tr>
+                            <td class="leftCell">Check</td>
+                        </tr>
+                    </table>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 
 
 
@@ -157,8 +238,51 @@
 
     <!--<script src="FormSecrets.js"></script>-->
     <script src="SidebarModule/Sidebar.js"></script>
+    <script src="Scripts/info.js"></script>
     <script>
+        const servicesOffered=[
+            "ADHD","Anger Management", "Behavioral Issues", "Bipolar Disorder",
+            "Coping Skills", "Depression", "Domestic Violence","Eating Disorders",
+            "Grief", "Racial Identity", "Relationship Issues", "Self Esteem Issues",
+            "Sleep or Insomnia", "Spirituality Issues", "Personal Growth and Development",
+            "Trauma and PTSD", "Mens' Issues", "Anxiety and Stress Management"
+        ]
 
+        const approaches=[
+            "Christian Counseling", "Cognitive Behavioral Therapy (CBT)", "Culturally-Sensitive Therapy",
+            "Dialectal Behavior Therapy(DBT)", "Family Systems", "Motivational Interviewing", "Person-Centered Therapy",
+            "Solution Focused Brief Therapy (SFBT)", "Strength-Based Therapy","Trauma-Focused Therapy"
+        ]
+        
+        function loadListTable(tableID, numCols, array) {
+            array.sort()
+            const table=document.getElementById(tableID)
+
+            columnCounter=1
+            var currentRow
+            for (var i=0;i<array.length;i++) {
+                if (columnCounter==1) {
+                    const newRow=document.createElement("tr")
+                    currentRow=newRow
+                }
+
+
+                const cell=document.createElement("td")
+                cell.innerText=array[i]
+                currentRow.appendChild(cell)
+
+
+                if (columnCounter==numCols) {
+                    table.appendChild(currentRow)
+                    columnCounter=1
+                }
+                else {columnCounter+=1}
+
+                if ((columnCounter!=1)&&(i==array.length-1)) {
+                    table.appendChild(currentRow)
+                }
+            }
+        }
         
 
         
@@ -194,11 +318,14 @@
         function MobileChanges(x) {
                 
             if (x.matches) {        //mobile device
+                loadListTable("serviceTable", 1, servicesOffered)
+                loadListTable("approachTable", 1, approaches)
                 document.getElementById("phoneLabel").innerText="Phone: "
                 
             }
             else {                  //desktop or laptop
-                
+                loadListTable("serviceTable", 2, servicesOffered)
+                loadListTable("approachTable", 2, approaches)
             }
         }
 
