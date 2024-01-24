@@ -169,7 +169,7 @@ form {
 }
 
 
-@media (min-width: 600px) and (max-width: 1300px){
+@media (min-width: 800px) and (max-width: 1300px){
     #outerFormDiv {
         left: 15%;
         width: 70%;

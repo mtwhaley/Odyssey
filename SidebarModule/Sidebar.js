@@ -25,25 +25,12 @@ function addFooterNavigation() {
         div.setAttribute("class", "footNavigation")
 
         Object.keys(navigation).forEach(function(key) {
-            if (first==false) {div.append("|")}
-            else {first=false}
+            if (key!="appointment") {
+                if (first==false) {div.append("|")}
+                else {first=false}
 
-            //special case for pop up instead of link
-            if (key=="appointment") { 
-                const object=navigation[key]
-                const button=document.createElement("button")
-
-                button.onclick=function() {openForm()}
-
-                if (object.footerText!=undefined) {
-                    button.innerText=object.footerText
-                }
-                else {
-                    button.innerText=object.sidebarText
-                }
-                div.appendChild(button)
-            }
-            else {
+            
+            
                 const object=navigation[key]
                 const anchor=document.createElement("a")
                 const button=document.createElement("button")
