@@ -13,6 +13,14 @@
     
 }
 
+#Location img {
+    width: 50vw;
+    height: 50vw;
+
+    max-width: 400px;
+    max-height: 400px;
+}
+
 iframe {
     width: 80vw;
     height: 40vw;
