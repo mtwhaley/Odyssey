@@ -7,7 +7,7 @@ navigation={
     "meet": {
         sidebarText: "Meet your Counselor",
         footerText: "Counselors",
-        href: "Meet.html"
+        href: "#therapist"
     },
     "appointment": {
         sidebarText: "Take the next step",
@@ -129,4 +129,3 @@ function resetMenuBars(bars) {
 }
 
 fillSidebar()
-addFooterNavigation()
