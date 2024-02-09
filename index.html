@@ -164,6 +164,7 @@
         </div>
     </div>
 
+    <div id="adjustSpacer"></div>
     <div class="canvas" id="therapist">
         <div id="PhotoDiv" style="margin-top: -10vh;">
             
@@ -307,7 +308,7 @@
     </div>
 
 
-    <!--<script src="FormSecrets.js"></script>-->
+    <script src="FormSecrets.js"></script>
     <script src="SidebarModule/Sidebar.js"></script>
     <script src="Scripts/info.js"></script>
     <script>
@@ -392,6 +393,8 @@
                 loadListTable("serviceTable", 1, servicesOffered)
                 loadListTable("approachTable", 1, approaches)
                 document.getElementById("phoneLabel").innerText="Phone: "
+
+                document.getElementById("adjustSpacer").style.height="25vh"
                 
             }
             else {                  //desktop or laptop
@@ -402,8 +405,8 @@
 
         document.addEventListener("DOMContentLoaded", function(e) {
 
-            //setFormDesignations()
-            //setFormAction()
+            setFormDesignations()
+            setFormAction()
             var x=window.matchMedia("(max-width: 1024px)")
             MobileChanges(x)
 
